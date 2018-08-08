@@ -7,6 +7,8 @@ import com.example.kson.okhttpandmvp.model.user.RegisterModel;
 import com.example.kson.okhttpandmvp.utils.RegexValidateUtil;
 import com.example.kson.okhttpandmvp.view.IRegView;
 
+import java.util.HashMap;
+
 /**
  * Author:kson
  * E-mail:19655910@qq.com
@@ -30,9 +32,7 @@ public class RegisterPresenter {
      */
     public void register(String mobile, String pwd) {
         if (TextUtils.isEmpty(mobile)){
-
             iRegView.mobileEmpty();
-
             return;
         }
 
@@ -45,7 +45,28 @@ public class RegisterPresenter {
             return;
         }
 
-        registerModel.register(mobile, pwd, new RegisterModel.RegCallback() {
+//        registerModel.register(mobile,pwd);
+//        registerModel.setRegCallback(new RegisterModel.RegCallback() {
+//            @Override
+//            public void failure(String errorMsg) {
+//
+//                iRegView.failure(errorMsg);
+//
+//            }
+//
+//            @Override
+//            public void success(UserBean userBean) {
+//
+//                iRegView.success(userBean);
+//
+//            }
+//        });
+
+        HashMap<String,String> params = new HashMap<>();
+        params.put("mobile",mobile);
+        params.put("password",pwd);
+
+        registerModel.register(params, new RegisterModel.RegCallback() {
             @Override
             public void failure(String errorMsg) {
 

@@ -3,6 +3,7 @@ package com.example.kson.okhttpandmvp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import com.example.kson.okhttpandmvp.common.Api;
 
@@ -39,9 +40,6 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 
-        //feature
-
-
     }
 
 
@@ -64,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
 
         for (Map.Entry<String, String> stringStringEntry : params.entrySet()) {
             sb.append(stringStringEntry.getKey()).append("=").append(stringStringEntry.getValue()).append("&");
-
         }
         System.out.println("sbsbsb:"+sb.toString());
         //1.全局管理类
@@ -123,6 +120,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        Button button = null;
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
 
 
