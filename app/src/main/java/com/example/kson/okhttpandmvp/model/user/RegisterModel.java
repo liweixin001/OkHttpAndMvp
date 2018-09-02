@@ -115,38 +115,6 @@ public class RegisterModel {
             }
         });
 
-//        OkHttpClient okHttpClient = new OkHttpClient.Builder()
-//                .build();
-//
-//        FormBody formBody = new FormBody.Builder()
-//                .add("mobile", mobile)
-//                .add("password", pwd).build();
-//
-//        Request request = new Request.Builder()
-//                .url(Api.REG_URL).post(formBody).build();
-//        okHttpClient.newCall(request).enqueue(new Callback() {
-//            //请求失败
-//            @Override
-//            public void onFailure(Call call, IOException e) {
-//                if (regCallback != null) {
-//                    regCallback.failure("请求失败");
-//                }
-//            }
-//
-//            //请求成功
-//            @Override
-//            public void onResponse(Call call, Response response) throws IOException {
-//                Thread.currentThread().getName();
-//                //1.得到响应体（json串），并解析成bean类
-//                //2.切换线程，把bean类回调给presenter层
-//                if (response.code() == 200) {
-//                    String result = response.body().string();//数据格式json串
-//                    parseJsonResult(result, regCallback);
-//                }
-//
-//            }
-//        });
-
     }
 
     /**

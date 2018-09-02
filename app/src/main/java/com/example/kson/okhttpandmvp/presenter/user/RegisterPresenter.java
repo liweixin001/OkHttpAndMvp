@@ -45,22 +45,6 @@ public class RegisterPresenter {
             return;
         }
 
-//        registerModel.register(mobile,pwd);
-//        registerModel.setRegCallback(new RegisterModel.RegCallback() {
-//            @Override
-//            public void failure(String errorMsg) {
-//
-//                iRegView.failure(errorMsg);
-//
-//            }
-//
-//            @Override
-//            public void success(UserBean userBean) {
-//
-//                iRegView.success(userBean);
-//
-//            }
-//        });
 
         HashMap<String,String> params = new HashMap<>();
         params.put("mobile",mobile);

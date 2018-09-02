@@ -49,7 +49,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         HashMap<String,String> params = new HashMap<>();
         params.put("keywords","手机");
 
-        OkHttpUtils.getInstance().getData(Api.PRODUCT_URL,params , new RequestCallback() {
+        OkHttpUtils.getInstance().postData(Api.PRODUCT_URL,params , new RequestCallback() {
             @Override
             public void failure(Call call, IOException e) {
 
